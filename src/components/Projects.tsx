@@ -4,6 +4,13 @@ import { useLanguage } from "../context/LanguageContext"
 function Projects() {
   const { language } = useLanguage();
   const t = translations[language]; 
+
+  const handleClick = (link: string) => {
+    if (link) {
+      window.open(link, "_blank");
+    }
+  };
+
   return (
     <section className="py-16 px-4">
     <div className="container mx-auto max-w-6xl">
@@ -13,7 +20,7 @@ function Projects() {
           <div
             key={index}
             className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transform hover:-translate-y-2 hover:scale-105 transition-transform duration-300 cursor-pointer"
-            onClick={() => window.open(project.link, "_blank")}
+            onClick={() => handleClick(project.link)}
           >
             <div className="mb-4">
               <h3 className="text-xl dark:text-white font-semibold mb-2">{project.title}</h3>
