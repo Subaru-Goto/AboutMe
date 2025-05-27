@@ -35,9 +35,10 @@ export const translations = {
     ],
     projectsList: [
       {
-        title: "",
-        description: "",
-        tech: [],
+        title: "Bild Advents Kalender",
+        description: "An interactive Advent calendar built with React and Tailwind CSS, featuring daily content updates.",
+        tech: ["React", "Tailwind CSS", "GSAP"],
+        link: "https://www.bild.de/ig/0f561b4c-e8b3-4d4b-a8bb-38cf07d5b3ed/index/index.html",
       },
     ],
   },
@@ -77,9 +78,10 @@ export const translations = {
     ],
     projectsList: [
       {
-        title: "",
-        description: "",
-        tech: ["React"],
+        title: "Bild Advents Kalender",
+        description: "ReactとTailwind CSSを使用した、アドベントカレンダー。",
+        tech: ["React", "Tailwind CSS", "GSAP"],
+        link: "https://www.bild.de/ig/0f561b4c-e8b3-4d4b-a8bb-38cf07d5b3ed/index/index.html",
       },
     ],
   },
@@ -119,9 +121,10 @@ export const translations = {
     ],
     projectsList: [
       {
-        title: "",
-        description: "",
-        tech: ["React"],
+        title: "Bild Advents Kalender",
+        description: "Interactive Adventskalender mit React und Tailwind CSS, der täglich neue Inhalte bietet.",
+        tech: ["React", "Tailwind CSS", "GSAP"],
+        link: "https://www.bild.de/ig/0f561b4c-e8b3-4d4b-a8bb-38cf07d5b3ed/index/index.html",
       },
     ],
   },

@@ -19,7 +19,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, index, refCallback
       <div
         ref={refCallback}
         className={`relative w-full md:w-5/12 ${
-          index % 2 === 0 ? "md:mr-auto md:pr-8 pl-16 md:pl-0" : "md:ml-auto md:pl-8 pl-16"
+          index % 2 === 0 ? "pb-11 md:mr-auto md:pr-8 pl-16 md:pl-0" : "pb-11 md:ml-auto md:pl-8 pl-16"
         }`}
         role="region"
         aria-label={`Experience at ${exp.company}`}
