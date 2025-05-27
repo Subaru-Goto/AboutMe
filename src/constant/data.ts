@@ -18,27 +18,43 @@ export const translations = {
         title: "Frontend Developer",
         company: "Axel Springer SE",
         period: "06.2024 - 06.2025",
-        description: "At Axel Springer, I developed React-based applications for various internal and public-facing projects, including an Advent calendar, data management controller, weather and election widgets. I also built a data management controller using React and implemented analytics and key performance indicators (KPIs) to support data-driven decision-making.",
+        description:
+          "At Axel Springer, I developed React-based applications for various internal and public-facing projects, including an Advent calendar, data management controller, weather and election widgets. I also built a data management controller using React and implemented analytics and key performance indicators (KPIs) to support data-driven decision-making.",
       },
       {
         title: "Product Analyst",
         company: "Zalando SE",
         period: "01.2022 – 11.2023",
-        description: "Monitored discount recommendation systems, built a data pipeline for governance dashboards, conducted frequent ad-hoc analyses using Python, and implemented basic anomaly detection with the Poisson distribution."
+        description:
+          "Monitored discount recommendation systems, built a data pipeline for governance dashboards, conducted frequent ad-hoc analyses using Python, and implemented basic anomaly detection with the Poisson distribution.",
       },
       {
         title: "Data Scientist",
         company: "trivago N.V.",
         period: "08.2019 – 01.2022",
-        description: "Developed optimal bid recommendation models for advertisers using a stochastic gradient descent classifier. Conducted A/B testing and analysis, built and maintained a reporting data pipeline, and trained two junior analysts and new team members with regular weekly support during their first six months."
-      }
+        description:
+          "Developed optimal bid recommendation models for advertisers using a stochastic gradient descent classifier. Conducted A/B testing and analysis, built and maintained a reporting data pipeline, and trained two junior analysts and new team members with regular weekly support during their first six months.",
+      },
     ],
     projectsList: [
       {
         title: "Bild Advents Kalender",
-        description: "An interactive Advent calendar built with React and Tailwind CSS, featuring daily content updates.",
+        description:
+          "An interactive Advent calendar built with React and Tailwind CSS, featuring daily content updates.",
         tech: ["React", "Tailwind CSS", "GSAP"],
         link: "https://www.bild.de/ig/0f561b4c-e8b3-4d4b-a8bb-38cf07d5b3ed/index/index.html",
+      },
+      {
+        title: "Coming Soon",
+        description: "",
+        tech: [],
+        link: "",
+      },
+      {
+        title: "Coming Soon",
+        description: "",
+        tech: [],
+        link: "",
       },
     ],
   },
@@ -61,20 +77,23 @@ export const translations = {
         title: "フロントエンド開発者",
         company: "Axel Springer SE",
         period: "2024年6月 - 2025年6月",
-        description: "Axel Springer社では、アドベントカレンダー、天気情報、選挙関連, データ管理用のコントローラーなどのプロジェクトにおいて、Reactを用いたアプリケーション開発を担当しました。ユーザー行動の分析を目的としたトラッキング実装やKPIの設定を行いました。",
+        description:
+          "Axel Springer社では、アドベントカレンダー、天気情報、選挙関連, データ管理用のコントローラーなどのプロジェクトにおいて、Reactを用いたアプリケーション開発を担当しました。ユーザー行動の分析を目的としたトラッキング実装やKPIの設定を行いました。",
       },
       {
         title: "プロダクトアナリスト",
         company: "Zalando SE",
         period: "2022年1月 – 2023年11月",
-        description: "割引推薦システムの監視を行い、割引ガバナンスダッシュボード用のデータパイプラインを構築。Pythonを用いたアドホック分析を頻繁に実施し、ポアソン分布を活用した基本的な異常検知を実装しました。"
+        description:
+          "割引推薦システムの監視を行い、割引ガバナンスダッシュボード用のデータパイプラインを構築。Pythonを用いたアドホック分析を頻繁に実施し、ポアソン分布を活用した基本的な異常検知を実装しました。",
       },
       {
         title: "データサイエンティスト",
         company: "trivago N.V.",
         period: "2019年8月 – 2022年1月",
-        description: "Stochastic gradient descent classifierを用いた広告主向けの入札最適化モデルを開発。A/Bテストの設計と分析を実施し、レポート用のデータパイプラインを構築・運用しました。ジュニアアナリスト2名と新メンバーの育成を担当し、最初の6ヶ月間は週次のフォローアップも行いました。"
-      }
+        description:
+          "Stochastic gradient descent classifierを用いた広告主向けの入札最適化モデルを開発。A/Bテストの設計と分析を実施し、レポート用のデータパイプラインを構築・運用しました。ジュニアアナリスト2名と新メンバーの育成を担当し、最初の6ヶ月間は週次のフォローアップも行いました。",
+      },
     ],
     projectsList: [
       {
@@ -82,6 +101,18 @@ export const translations = {
         description: "ReactとTailwind CSSを使用した、アドベントカレンダー。",
         tech: ["React", "Tailwind CSS", "GSAP"],
         link: "https://www.bild.de/ig/0f561b4c-e8b3-4d4b-a8bb-38cf07d5b3ed/index/index.html",
+      },
+      {
+        title: "Coming Soon",
+        description: "",
+        tech: [],
+        link: "",
+      },
+      {
+        title: "Coming Soon",
+        description: "",
+        tech: [],
+        link: "",
       },
     ],
   },
@@ -104,27 +135,43 @@ export const translations = {
         title: "Frontend-Entwickler",
         company: "Axel Springer SE",
         period: "05.2025 - 06.2025",
-        description: "Bei Axel Springer entwickelte ich React-basierte Anwendungen für verschiedene Projekte, darunter ein Adventskalender, Wetter-Apps und ein Wahl-Widget. Zudem erstellte ich ein Datenverwaltungs-Tool mit React und implementierte Analytik-Mechanismen sowie KPIs zur Unterstützung datenbasierter Entscheidungen.",
+        description:
+          "Bei Axel Springer entwickelte ich React-basierte Anwendungen für verschiedene Projekte, darunter ein Adventskalender, Wetter-Apps und ein Wahl-Widget. Zudem erstellte ich ein Datenverwaltungs-Tool mit React und implementierte Analytik-Mechanismen sowie KPIs zur Unterstützung datenbasierter Entscheidungen.",
       },
       {
         title: "Product Analyst",
         company: "Zalando SE",
         period: "01.2022 – 11.2023",
-        description: "Überwachte Rabatt-Empfehlungssysteme, entwickelte eine Datenpipeline für Governance-Dashboards, führte regelmäßig Ad-hoc-Analysen mit Python durch und implementierte eine einfache Anomalieerkennung basierend auf der Poisson-Verteilung."
+        description:
+          "Überwachte Rabatt-Empfehlungssysteme, entwickelte eine Datenpipeline für Governance-Dashboards, führte regelmäßig Ad-hoc-Analysen mit Python durch und implementierte eine einfache Anomalieerkennung basierend auf der Poisson-Verteilung.",
       },
       {
         title: "Data Scientist",
         company: "trivago N.V.",
         period: "08.2019 – 01.2022",
-        description: "Entwickelte ein Empfehlungsmodell für optimale Gebote von Werbetreibenden mithilfe eines stochastischen Gradientenabstiegs-Klassifikators. Führte A/B-Tests durch und analysierte die Ergebnisse, erstellte und pflegte eine Reporting-Datenpipeline und betreute zwei Junior-Analysten sowie neue Teammitglieder mit wöchentlichen Check-ins in den ersten sechs Monaten."
-      }
+        description:
+          "Entwickelte ein Empfehlungsmodell für optimale Gebote von Werbetreibenden mithilfe eines stochastischen Gradientenabstiegs-Klassifikators. Führte A/B-Tests durch und analysierte die Ergebnisse, erstellte und pflegte eine Reporting-Datenpipeline und betreute zwei Junior-Analysten sowie neue Teammitglieder mit wöchentlichen Check-ins in den ersten sechs Monaten.",
+      },
     ],
     projectsList: [
       {
         title: "Bild Advents Kalender",
-        description: "Interactive Adventskalender mit React und Tailwind CSS, der täglich neue Inhalte bietet.",
+        description:
+          "Interactive Adventskalender mit React und Tailwind CSS, der täglich neue Inhalte bietet.",
         tech: ["React", "Tailwind CSS", "GSAP"],
         link: "https://www.bild.de/ig/0f561b4c-e8b3-4d4b-a8bb-38cf07d5b3ed/index/index.html",
+      },
+      {
+        title: "Coming Soon",
+        description: "",
+        tech: [],
+        link: "",
+      },
+      {
+        title: "Coming Soon",
+        description: "",
+        tech: [],
+        link: "",
       },
     ],
   },
