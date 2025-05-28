@@ -16,7 +16,7 @@ export default function Hero() {
           {t.name}
         </h1>
         <h2 className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-6">{t.title}</h2>
-        <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-8">{t.subtitle}</p>
+        <p className="text-lg text-slate-500 dark:text-slate-400 max-w4xl mx-auto mb-8 px-4">{t.subtitle}</p>
       </div>
     </div>
   </section>
