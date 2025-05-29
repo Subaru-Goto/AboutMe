@@ -57,6 +57,7 @@ export const translations = {
         link: "",
       },
     ],
+    getInTouch: "Get In Touch",
   },
   ja: {
     name: "後藤　昴",
@@ -115,6 +116,7 @@ export const translations = {
         link: "",
       },
     ],
+    getInTouch: "お問い合わせ",
   },
   de: {
     name: "Subaru Goto",
@@ -174,5 +176,6 @@ export const translations = {
         link: "",
       },
     ],
+    getInTouch: "Kontakt aufnehmen",
   },
 };

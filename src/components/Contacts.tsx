@@ -1,11 +1,17 @@
+import { useState } from "react";
 import { translations } from "../constant/data";
 import { useLanguage } from "../context/LanguageContext";
 import { FaGithub as Github } from "react-icons/fa";
 import { FaLinkedin as Linkedin } from "react-icons/fa6";
 
 const Contacts = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const { language } = useLanguage();
   const t = translations[language];
+
+  const openContactModal = () => {
+    setIsContactModalOpen(true)
+  }
 
   return (
     <section className="py-16 px-4 bg-white dark:bg-slate-800">
@@ -15,7 +21,7 @@ const Contacts = () => {
           {t.contactText}
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center"></div>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-4 mb-8 justify-center">
           <a
             href={import.meta.env.VITE_GITHUB_URL}
             target="_blank"
@@ -33,6 +39,14 @@ const Contacts = () => {
             <Linkedin className="cursor-pointer h-5 w-5" />
           </a>
         </div>
+
+        <button
+          onClick={openContactModal}
+          className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-medium text-lg"
+        >
+          {t.getInTouch}
+        </button>
+
       </div>
     </section>
   );
