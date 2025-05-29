@@ -3,6 +3,7 @@ import { translations } from "../constant/data";
 import { useLanguage } from "../context/LanguageContext";
 import { FaGithub as Github } from "react-icons/fa";
 import { FaLinkedin as Linkedin } from "react-icons/fa6";
+import { EnvelopeIcon as Mail } from "@heroicons/react/24/outline";
 
 const Contacts = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -48,6 +49,14 @@ const Contacts = () => {
         </button>
 
       </div>
+
+      <button
+        onClick={openContactModal}
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center z-40 hover:scale-110"
+      >
+        <Mail className="h-6 w-6" />
+      </button>
+
     </section>
   );
 };
