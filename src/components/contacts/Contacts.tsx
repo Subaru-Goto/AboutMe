@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { translations } from "../constant/data";
-import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../../constant/data";
+import { useLanguage } from "../../context/LanguageContext";
 import { FaGithub as Github } from "react-icons/fa";
 import { FaLinkedin as Linkedin } from "react-icons/fa6";
 import { EnvelopeIcon as Mail } from "@heroicons/react/24/outline";
@@ -57,6 +57,8 @@ const Contacts = () => {
         <Mail className="h-6 w-6" />
       </button>
 
+      {isContactModalOpen && <></> }
+      
     </section>
   );
 };
