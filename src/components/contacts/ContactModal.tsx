@@ -25,7 +25,7 @@ function ContactModal({
 
   const EMAILJS_CONFIG = {
     serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    templateId: import.meta.env.VITE_EMAILJS_template_ID,
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
     publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
   };
 
@@ -81,7 +81,6 @@ function ContactModal({
     try {
       const templateParams = {
         from_name: name,
-        from_email: email,
         subject: subject,
         message: message,
         reply_to: email,
