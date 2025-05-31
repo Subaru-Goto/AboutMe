@@ -9,6 +9,9 @@ import {
   ChatBubbleLeftIcon as MessageSquare,
 } from "@heroicons/react/24/outline";
 import emailjs from "@emailjs/browser";
+import { EMAILJS_CONFIG } from "../../config/emailConfig";
+import type { ContactFormState } from "../../types/contactForm";
+import { validateForm } from "../../utils/validateForm";
 
 function ContactModal({
   setIsContactModalOpen,
@@ -23,23 +26,6 @@ function ContactModal({
     {}
   );
 
-  const EMAILJS_CONFIG = {
-    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-  };
-
-  type ContactFormState = {
-    success?: boolean;
-    error?: string;
-    fieldErrors?: {
-      name?: string;
-      email?: string;
-      subject?: string;
-      message?: string;
-    };
-  };
-
   const closeContactModal = () => {
     setIsContactModalOpen(false);
   };
@@ -48,42 +34,18 @@ function ContactModal({
     _: ContactFormState,
     formData: FormData
   ): Promise<ContactFormState> {
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const subject = formData.get("subject") as string;
-    const message = formData.get("message") as string;
+    const { fieldErrors, isValid } = validateForm(formData, t);
 
-    // Initialize validation
-    const fieldErrors: ContactFormState["fieldErrors"] = {};
-
-    if (!name?.trim()) {
-      fieldErrors.name = t.contactForm.nameRequired;
-    }
-
-    if (!email?.trim()) {
-      fieldErrors.email = t.contactForm.emailRequired;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      fieldErrors.email = t.contactForm.emailInvalid;
-    }
-
-    if (!subject?.trim()) {
-      fieldErrors.subject = t.contactForm.subjectRequired;
-    }
-
-    if (!message?.trim()) {
-      fieldErrors.message = t.contactForm.messageRequired;
-    }
-
-    if (Object.keys(fieldErrors).length > 0) {
+    if (!isValid) {
       return { fieldErrors };
     }
 
     try {
       const templateParams = {
-        from_name: name,
-        subject: subject,
-        message: message,
-        reply_to: email,
+        from_name: formData.get("name"),
+        subject: formData.get("subject"),
+        message: formData.get("message"),
+        reply_to: formData.get("email"),
       };
 
       const result = await emailjs.send(
@@ -114,7 +76,6 @@ function ContactModal({
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white dark:bg-slate-800 rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
-
         <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
             {t.contactForm.title}
@@ -128,8 +89,11 @@ function ContactModal({
         </div>
 
         <div className="p-6">
-          <form action={formAction} className="space-y-4">
- 
+          <form
+            action={formAction}
+            className="space-y-4"
+            aria-labelledby="contact-form-title"
+          >
             <div>
               <label
                 htmlFor="name"
