@@ -4,6 +4,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import { FaGithub as Github } from "react-icons/fa";
 import { FaLinkedin as Linkedin } from "react-icons/fa6";
 import { EnvelopeIcon as Mail } from "@heroicons/react/24/outline";
+import ContactModal from "./ContactModal";
 
 const Contacts = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -11,8 +12,8 @@ const Contacts = () => {
   const t = translations[language];
 
   const openContactModal = () => {
-    setIsContactModalOpen(true)
-  }
+    setIsContactModalOpen(true);
+  };
 
   return (
     <section className="py-16 px-4 bg-white dark:bg-slate-800">
@@ -47,7 +48,6 @@ const Contacts = () => {
         >
           {t.getInTouch}
         </button>
-
       </div>
 
       <button
@@ -57,8 +57,9 @@ const Contacts = () => {
         <Mail className="h-6 w-6" />
       </button>
 
-      {isContactModalOpen && <></> }
-      
+      {isContactModalOpen && (
+        <ContactModal setIsContactModalOpen={setIsContactModalOpen} />
+      )}
     </section>
   );
 };

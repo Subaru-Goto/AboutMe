@@ -10,7 +10,11 @@ import {
 } from "@heroicons/react/24/outline";
 import emailjs from "@emailjs/browser";
 
-function ContactModal({ closeContactModal, setIsContactModalOpen }) {
+function ContactModal({
+  setIsContactModalOpen,
+}: {
+  setIsContactModalOpen: (isOpen: boolean) => void;
+}) {
   const { language } = useLanguage();
   const t = translations[language];
   const formRef = useRef<HTMLFormElement>(null);
@@ -36,8 +40,12 @@ function ContactModal({ closeContactModal, setIsContactModalOpen }) {
     };
   };
 
+  const closeContactModal = () => {
+    setIsContactModalOpen(false);
+  };
+
   async function submitContactForm(
-    prevState: ContactFormState,
+    _: ContactFormState,
     formData: FormData
   ): Promise<ContactFormState> {
     const name = formData.get("name") as string;
@@ -45,7 +53,7 @@ function ContactModal({ closeContactModal, setIsContactModalOpen }) {
     const subject = formData.get("subject") as string;
     const message = formData.get("message") as string;
 
-    // Validation
+    // Initialize validation
     const fieldErrors: ContactFormState["fieldErrors"] = {};
 
     if (!name?.trim()) {
@@ -107,7 +115,7 @@ function ContactModal({ closeContactModal, setIsContactModalOpen }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white dark:bg-slate-800 rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
-        {/* Modal Header */}
+
         <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
             {t.contactForm.title}
@@ -120,10 +128,9 @@ function ContactModal({ closeContactModal, setIsContactModalOpen }) {
           </button>
         </div>
 
-        {/* Modal Body */}
         <div className="p-6">
           <form action={formAction} className="space-y-4">
-            {/* Name Field */}
+ 
             <div>
               <label
                 htmlFor="name"
@@ -150,7 +157,6 @@ function ContactModal({ closeContactModal, setIsContactModalOpen }) {
               )}
             </div>
 
-            {/* Email Field */}
             <div>
               <label
                 htmlFor="email"
@@ -177,7 +183,6 @@ function ContactModal({ closeContactModal, setIsContactModalOpen }) {
               )}
             </div>
 
-            {/* Subject Field */}
             <div>
               <label
                 htmlFor="subject"
@@ -203,7 +208,6 @@ function ContactModal({ closeContactModal, setIsContactModalOpen }) {
               )}
             </div>
 
-            {/* Message Field */}
             <div>
               <label
                 htmlFor="message"
@@ -230,7 +234,6 @@ function ContactModal({ closeContactModal, setIsContactModalOpen }) {
               )}
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={isPending}
