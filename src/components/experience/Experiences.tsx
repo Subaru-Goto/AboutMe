@@ -135,7 +135,7 @@ function Experiences() {
           </div>
 
           {/* Experience Items */}
-          <div className="space-y-12">
+          <div className="space-y-12 overflow-x-hidden">
             {t.experiences.map((exp, index) => (
               <ExperienceCard
                 key={index}
