@@ -5,10 +5,10 @@ export const translations = {
     name: "Subaru Goto",
     title: "AI Product Engineer",
     subtitle:
-      "Full-Stack Developer with a Strong Analytics Foundation and a Passion for Scalable Solutions",
+      "Building AI-Powered Products End to End — from Data and LLM Pipelines to Polished User Interfaces",
     about: "About Me",
     aboutText:
-      "I am a full-stack web developer and former product analyst with a strong foundation in data science and a passion for building scalable, user-centered applications. My background in analytics enables me to approach development with a data-driven mindset, ensuring efficient and impactful solutions. I have hands-on experience with modern technologies such as React, Node.js, Express, MongoDB, and Python. With a history of working in international tech environments, I thrive in collaborative teams and enjoy bridging the gap between data and development to drive meaningful results.",
+      "I am an AI product engineer with roots in data science and full-stack web development. I started out building machine learning models, A/B tests, and data pipelines as a data scientist and product analyst at trivago and Zalando, then moved into frontend engineering at Axel Springer to learn how polished products are actually shipped. Today I combine both worlds: I build AI-powered applications end to end — React and TypeScript on the frontend, Python, FastAPI, and LangChain on the backend — with a data-driven mindset throughout. Having worked in international tech teams, I enjoy turning ideas into user-centered products that create real value.",
     skills: "Technical Skills",
     experience: "Experience",
     projects: "Projects",
@@ -81,10 +81,10 @@ export const translations = {
     name: "後藤　昴",
     title: "AIプロダクトエンジニア",
     subtitle:
-      "分析力を強みに持つフルスタックエンジニア。スケーラブルなソリューションの構築に注力しています",
+      "データ・LLMパイプラインから洗練されたUIまで、AIプロダクトをエンドツーエンドで開発しています",
     about: "自己紹介",
     aboutText:
-      "プロダクトアナリストとしての経験とデータサイエンスの知見を活かすフルスタックエンジニアです。React、Node.js、Express、MongoDB、Pythonなどのモダンな技術に精通しており、フロントエンドからバックエンドまで幅広く対応できます。データに基づいた開発アプローチを得意とし、ユーザーにとって価値のあるスケーラブルなアプリケーションの構築に取り組んでいます。国際的なテック企業での経験を通じて、チームでの協働を大切にしながら、高品質なソリューションの提供を目指しています。",
+      "データサイエンスとフルスタック開発を基盤とするAIプロダクトエンジニアです。trivagoやZalandoでデータサイエンティスト・プロダクトアナリストとして機械学習モデルやA/Bテスト、データパイプラインの構築に携わった後、Axel Springerでフロントエンド開発に従事し、プロダクトを磨き上げて届けるまでの過程を学びました。現在はこの2つの経験を組み合わせ、フロントエンドはReactとTypeScript、バックエンドはPython・FastAPI・LangChainを用いて、AIを活用したプロダクトをエンドツーエンドで開発しています。国際的なチームでの協働を得意とし、アイデアをユーザー中心の価値あるプロダクトへと形にすることを大切にしています。",
     skills: "技術スキル",
     experience: "経験",
     projects: "プロジェクト",
@@ -156,10 +156,10 @@ export const translations = {
     name: "Subaru Goto",
     title: "AI Product Engineer",
     subtitle:
-      "Full-Stack-Entwickler mit starker analytischer Kompetenz und Leidenschaft für skalierbare Lösungen",
+      "KI-gestützte Produkte end-to-end — von Daten- und LLM-Pipelines bis zur ausgereiften Benutzeroberfläche",
     about: "Über mich",
     aboutText:
-      "Ich bin ein Full-Stack-Webentwickler mit einem Hintergrund als Product Analyst und fundierten Kenntnissen in der Datenanalyse. Durch meine Erfahrung in der Arbeit mit Technologien wie React, Node.js, Express, MongoDB und Python entwickle ich moderne, skalierbare Webanwendungen mit einem datengetriebenen Ansatz. Dank meiner analytischen Denkweise und meiner Erfahrung in internationalen Tech-Umgebungen verstehe ich es, technische Lösungen effizient mit Geschäftszielen zu verbinden. Ich arbeite gerne im Team und strebe stets danach, durch Technologie echten Mehrwert zu schaffen.",
+      "Ich bin AI Product Engineer mit Wurzeln in Data Science und Full-Stack-Webentwicklung. Begonnen habe ich als Data Scientist und Product Analyst bei trivago und Zalando, wo ich Machine-Learning-Modelle, A/B-Tests und Datenpipelines entwickelte, bevor ich bei Axel Springer in die Frontend-Entwicklung wechselte und lernte, wie ausgereifte Produkte wirklich ausgeliefert werden. Heute verbinde ich beide Welten und entwickle KI-gestützte Anwendungen end-to-end — mit React und TypeScript im Frontend sowie Python, FastAPI und LangChain im Backend, stets mit einem datengetriebenen Ansatz. Durch meine Erfahrung in internationalen Teams verwandle ich Ideen gerne in nutzerzentrierte Produkte mit echtem Mehrwert.",
     skills: "Technische Fähigkeiten",
     experience: "Erfahrung",
     projects: "Projekte",
