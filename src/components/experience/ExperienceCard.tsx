@@ -9,28 +9,40 @@ type ExperienceCardProps = {
   refCallback: (el: HTMLDivElement | null) => void;
 };
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, index, refCallback }) => {
+const ExperienceCard = ({ exp, index, refCallback }: ExperienceCardProps) => {
   return (
     <div className="relative">
       {/* Timeline Dot */}
-      <div className="absolute left-6.5 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-slate-800 z-10" />
+      <div className="absolute left-6.5 md:left-1/2 md:-translate-x-1/2 size-3 bg-accent rounded-full ring-4 ring-surface-alt z-10" />
 
-      {/* Experience Card */}
       <div
-        ref={refCallback}
         className={`relative w-full md:w-5/12 ${
-          index % 2 === 0 ? "pb-11 md:mr-auto md:pr-8 pl-16 md:pl-0" : "pb-11 md:ml-auto md:pl-8 pl-16"
+          index % 2 === 0
+            ? "pb-11 md:mr-auto md:pr-8 pl-16 md:pl-0"
+            : "pb-11 md:ml-auto md:pl-8 pl-16"
         }`}
         role="region"
         aria-label={`Experience at ${exp.company}`}
       >
-        <div className="bg-gray-50 dark:bg-slate-700 rounded-lg border border-gray-200 dark:border-gray-600 p-6 shadow-lg">
+        <div
+          ref={refCallback}
+          data-reveal
+          style={
+            {
+              "--reveal-x": index % 2 === 0 ? "-32px" : "32px",
+              "--reveal-y": "0px",
+            } as React.CSSProperties
+          }
+          className="experience-card bg-surface-raised rounded-card border border-line p-6"
+        >
           <div className="mb-4">
-            <h3 className="text-xl dark:text-white font-semibold mb-2">{exp.title}</h3>
-            <p className="text-lg text-blue-600 dark:text-blue-400 font-medium">{exp.company}</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{exp.period}</p>
+            <h3 className="text-xl font-semibold mb-2">{exp.title}</h3>
+            <p className="text-lg text-accent font-medium">{exp.company}</p>
+            <p className="text-sm text-ink-tertiary mt-1">{exp.period}</p>
           </div>
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{exp.description}</p>
+          <p className="text-ink-secondary leading-relaxed">
+            {exp.description}
+          </p>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import type { ContactFormState } from "../types/contactForm";
+import type { Translation } from "../constant/data";
 
-export function validateForm(formData: FormData, t: any) {
+export function validateForm(formData: FormData, t: Translation) {
   const fieldErrors: ContactFormState["fieldErrors"] = {};
   const name = formData.get("name") as string;
   const email = formData.get("email") as string;

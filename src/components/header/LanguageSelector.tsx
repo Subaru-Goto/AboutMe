@@ -11,14 +11,14 @@ export default function LanguageSelector() {
   const { language, setLanguage } = useLanguage();
 
   const getButtonClass = (lang: Language) =>
-    `px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+    `px-3 py-1 text-xs font-medium rounded-full transition-colors ${
       language === lang
-        ? "bg-blue-600 text-white"
-        : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+        ? "bg-surface-raised text-ink shadow-sm"
+        : "text-ink-secondary hover:text-ink"
     }`;
 
   return (
-    <div className="flex gap-2">
+    <div className="flex rounded-full bg-surface-alt border border-line p-0.5">
       {languages.map(({ code, label }) => (
         <button
           key={code}
