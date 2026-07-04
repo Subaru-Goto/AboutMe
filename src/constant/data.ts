@@ -3,7 +3,7 @@ import type { Language } from "../types/language";
 export const translations = {
   en: {
     name: "Subaru Goto",
-    title: "Software Engineer",
+    title: "AI Product Engineer",
     subtitle:
       "Full-Stack Developer with a Strong Analytics Foundation and a Passion for Scalable Solutions",
     about: "About Me",
@@ -79,7 +79,7 @@ export const translations = {
   },
   ja: {
     name: "後藤　昴",
-    title: "ソフトウェアエンジニア",
+    title: "AIプロダクトエンジニア",
     subtitle:
       "分析力を強みに持つフルスタックエンジニア。スケーラブルなソリューションの構築に注力しています",
     about: "自己紹介",
@@ -154,7 +154,7 @@ export const translations = {
   },
   de: {
     name: "Subaru Goto",
-    title: "Software-Ingenieur",
+    title: "AI Product Engineer",
     subtitle:
       "Full-Stack-Entwickler mit starker analytischer Kompetenz und Leidenschaft für skalierbare Lösungen",
     about: "Über mich",
