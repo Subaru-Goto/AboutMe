@@ -1,12 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import "tailwindcss";
 
-body, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --surface: #ffffff;
+  --surface-alt: #f5f5f7;
+  --surface-raised: #ffffff;
+  --ink: #1d1d1f;
+  --ink-secondary: #6e6e73;
+  --ink-tertiary: #86868b;
+  --line: #d2d2d7;
+  --accent: #0071e3;
+  --accent-hover: #0077ed;
+  --accent-soft: rgba(0, 113, 227, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #000000;
+    --surface-alt: #161617;
+    --surface-raised: #1d1d1f;
+    --ink: #f5f5f7;
+    --ink-secondary: #a1a1a6;
+    --ink-tertiary: #6e6e73;
+    --line: #424245;
+    --accent: #2997ff;
+    --accent-hover: #46a6ff;
+    --accent-soft: rgba(41, 151, 255, 0.16);
+  }
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-raised: var(--surface-raised);
+  --color-ink: var(--ink);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-tertiary: var(--ink-tertiary);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
 }
 
 @theme {
-  --font-montserrat: "Montserrat", sans-serif; 
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Yu Gothic UI", Meiryo, Arial, sans-serif;
+  --radius-card: 1.125rem;
+  --radius-field: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-ink antialiased;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+@layer components {
+  .experience-card {
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .experience-card.is-active {
+    border-color: var(--accent);
+    box-shadow: 0 12px 32px var(--accent-soft);
+  }
 }
