@@ -1,3 +1,5 @@
+import type { Language } from "../types/language";
+
 export const translations = {
   en: {
     name: "Subaru Goto",
@@ -227,3 +229,5 @@ export const translations = {
     },
   },
 };
+
+export type Translation = (typeof translations)[Language];

@@ -57,7 +57,6 @@ function ContactModal({
 
       console.log("Email sent successfully:", result);
 
-      // Reset form and close modal after success
       if (formRef.current) {
         formRef.current.reset();
       }
@@ -73,16 +72,19 @@ function ContactModal({
     }
   }
 
+  const inputClass = (error?: string) =>
+    `w-full px-3 py-2 border rounded-field focus:ring-2 focus:ring-accent focus:border-transparent transition-colors bg-surface ${
+      error ? "border-red-500" : "border-line"
+    }`;
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white dark:bg-slate-800 rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-            {t.contactForm.title}
-          </h3>
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+      <div className="bg-surface-raised rounded-2xl border border-line max-w-md w-full max-h-[90vh] overflow-y-auto">
+        <div className="flex items-center justify-between p-6 border-b border-line">
+          <h3 className="text-xl font-semibold">{t.contactForm.title}</h3>
           <button
             onClick={closeContactModal}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            className="text-ink-tertiary hover:text-ink transition-colors"
           >
             <X className="h-6 w-6" />
           </button>
@@ -90,6 +92,7 @@ function ContactModal({
 
         <div className="p-6">
           <form
+            ref={formRef}
             action={formAction}
             className="space-y-4"
             aria-labelledby="contact-form-title"
@@ -97,7 +100,7 @@ function ContactModal({
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm font-medium text-ink-secondary mb-2"
               >
                 <User className="inline h-4 w-4 mr-2" />
                 {t.contactForm.name}
@@ -106,11 +109,7 @@ function ContactModal({
                 type="text"
                 id="name"
                 name="name"
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors bg-white dark:bg-slate-700 text-gray-900 dark:text-gray-100 ${
-                  formState.fieldErrors?.name
-                    ? "border-red-500"
-                    : "border-gray-300 dark:border-gray-600"
-                }`}
+                className={inputClass(formState.fieldErrors?.name)}
                 placeholder={t.contactForm.name}
               />
               {formState.fieldErrors?.name && (
@@ -123,7 +122,7 @@ function ContactModal({
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm font-medium text-ink-secondary mb-2"
               >
                 <Mail className="inline h-4 w-4 mr-2" />
                 {t.contactForm.email}
@@ -132,11 +131,7 @@ function ContactModal({
                 type="email"
                 id="email"
                 name="email"
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors bg-white dark:bg-slate-700 text-gray-900 dark:text-gray-100 ${
-                  formState.fieldErrors?.email
-                    ? "border-red-500"
-                    : "border-gray-300 dark:border-gray-600"
-                }`}
+                className={inputClass(formState.fieldErrors?.email)}
                 placeholder={t.contactForm.email}
               />
               {formState.fieldErrors?.email && (
@@ -149,7 +144,7 @@ function ContactModal({
             <div>
               <label
                 htmlFor="subject"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm font-medium text-ink-secondary mb-2"
               >
                 {t.contactForm.subject}
               </label>
@@ -157,11 +152,7 @@ function ContactModal({
                 type="text"
                 id="subject"
                 name="subject"
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors bg-white dark:bg-slate-700 text-gray-900 dark:text-gray-100 ${
-                  formState.fieldErrors?.subject
-                    ? "border-red-500"
-                    : "border-gray-300 dark:border-gray-600"
-                }`}
+                className={inputClass(formState.fieldErrors?.subject)}
                 placeholder={t.contactForm.subject}
               />
               {formState.fieldErrors?.subject && (
@@ -174,7 +165,7 @@ function ContactModal({
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm font-medium text-ink-secondary mb-2"
               >
                 <MessageSquare className="inline h-4 w-4 mr-2" />
                 {t.contactForm.message}
@@ -183,11 +174,7 @@ function ContactModal({
                 id="message"
                 name="message"
                 rows={4}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors bg-white dark:bg-slate-700 text-gray-900 dark:text-gray-100 resize-none ${
-                  formState.fieldErrors?.message
-                    ? "border-red-500"
-                    : "border-gray-300 dark:border-gray-600"
-                }`}
+                className={`${inputClass(formState.fieldErrors?.message)} resize-none`}
                 placeholder={t.contactForm.message}
               />
               {formState.fieldErrors?.message && (
@@ -200,7 +187,7 @@ function ContactModal({
             <button
               type="submit"
               disabled={isPending}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-accent hover:bg-accent-hover text-white py-3 px-6 rounded-full font-medium focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isPending ? (
                 <>
@@ -215,15 +202,14 @@ function ContactModal({
               )}
             </button>
 
-            {/* Status Messages */}
             {formState.success && (
-              <div className="p-3 bg-green-100 dark:bg-green-900 border border-green-400 dark:border-green-600 text-green-700 dark:text-green-300 rounded-lg text-sm">
+              <div className="p-3 bg-green-500/10 border border-green-500/30 text-green-600 dark:text-green-400 rounded-field text-sm">
                 {t.contactForm.success}
               </div>
             )}
 
             {formState.error && (
-              <div className="p-3 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-300 rounded-lg text-sm">
+              <div className="p-3 bg-red-500/10 border border-red-500/30 text-red-600 dark:text-red-400 rounded-field text-sm">
                 {formState.error}
               </div>
             )}
