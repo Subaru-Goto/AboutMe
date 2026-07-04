@@ -62,6 +62,26 @@
 }
 
 @layer components {
+  /* Reveal animation: class-driven so content can never be left invisible
+     by a killed/starved JS tween. Hidden state only exists when JS has
+     added .reveals-enabled, and only until .reveal-done releases the
+     element back to its normal styles (restoring Tailwind hover
+     transitions). */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveals-enabled [data-reveal]:not(.reveal-done) {
+      opacity: 0;
+      translate: var(--reveal-x, 0px) var(--reveal-y, 24px);
+      transition:
+        opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        translate 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveals-enabled [data-reveal].is-revealed:not(.reveal-done) {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
   .experience-card {
     transition: border-color 0.3s, box-shadow 0.3s;
   }

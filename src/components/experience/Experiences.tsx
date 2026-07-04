@@ -5,13 +5,20 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExperienceCard from "./ExperienceCard";
+import { useReveal } from "../../hooks/useReveal";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+// Rendering-suspended tabs tick rAF rarely; default lag smoothing would
+// advance tweens only 33ms per tick, so the scrub fill would lag far
+// behind the scroll position. 0 = always jump to the real elapsed time.
+gsap.ticker.lagSmoothing(0);
 
 function Experiences() {
   const { language } = useLanguage();
   const t = translations[language];
 
+  const scope = useReveal<HTMLElement>();
   const containerRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
   const experienceRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -37,21 +44,8 @@ function Experiences() {
           );
         }
 
-        experienceRefs.current.forEach((ref, index) => {
+        experienceRefs.current.forEach((ref) => {
           if (!ref) return;
-
-          gsap.from(ref, {
-            autoAlpha: 0,
-            x: index % 2 === 0 ? -32 : 32,
-            duration: 0.8,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: ref,
-              start: "top 85%",
-              once: true,
-            },
-          });
-
           ScrollTrigger.create({
             trigger: ref,
             start: "top 60%",
@@ -66,11 +60,15 @@ function Experiences() {
 
   return (
     <section
+      ref={scope}
       id="experience"
       className="scroll-mt-16 bg-surface-alt px-4 py-24 md:py-32"
     >
       <div ref={containerRef} className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-center mb-16">
+        <h2
+          data-reveal
+          className="text-3xl md:text-4xl font-semibold tracking-tight text-center mb-16"
+        >
           {t.experience}
         </h2>
 

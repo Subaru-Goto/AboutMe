@@ -5,7 +5,7 @@ import { useReveal } from "../hooks/useReveal";
 export default function Hero() {
   const { language } = useLanguage();
   const t = translations[language];
-  const scope = useReveal<HTMLElement>({ onMount: true, y: 28, stagger: 0.12 });
+  const scope = useReveal<HTMLElement>({ onMount: true, stagger: 0.12 });
 
   return (
     <section

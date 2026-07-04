@@ -26,6 +26,13 @@ const ExperienceCard = ({ exp, index, refCallback }: ExperienceCardProps) => {
       >
         <div
           ref={refCallback}
+          data-reveal
+          style={
+            {
+              "--reveal-x": index % 2 === 0 ? "-32px" : "32px",
+              "--reveal-y": "0px",
+            } as React.CSSProperties
+          }
           className="experience-card bg-surface-raised rounded-card border border-line p-6"
         >
           <div className="mb-4">
