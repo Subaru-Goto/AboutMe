@@ -8,7 +8,7 @@ export const translations = {
       "Building AI-Powered Products End to End — from Data and LLM Pipelines to Polished User Interfaces",
     about: "About Me",
     aboutText:
-      "I am an AI product engineer with roots in data science and full-stack web development. I started out building machine learning models, A/B tests, and data pipelines as a data scientist and product analyst at trivago and Zalando, then moved into frontend engineering at Axel Springer to learn how polished products are actually shipped. Today I combine both worlds: I build AI-powered applications end to end — React and TypeScript on the frontend, Python, FastAPI, and LangChain on the backend — with a data-driven mindset throughout. Having worked in international tech teams, I enjoy turning ideas into user-centered products that create real value.",
+      "I am an AI product engineer with roots in data science and full-stack web development. I started out building machine learning models, A/B tests, and data pipelines as a data scientist and product analyst at trivago and Zalando, then moved into frontend engineering at Axel Springer to learn how polished products are actually shipped. Today I combine both worlds: I build AI-powered applications end to end — React and TypeScript on the frontend, Node.js, TypeScript, Python, FastAPI, and LangChain on the backend — with a data-driven mindset throughout. Having worked in international tech teams, I enjoy turning ideas into user-centered products that create real value.",
     skills: "Technical Skills",
     experience: "Experience",
     projects: "Projects",
@@ -84,7 +84,7 @@ export const translations = {
       "データ・LLMパイプラインから洗練されたUIまで、AIプロダクトをエンドツーエンドで開発しています",
     about: "自己紹介",
     aboutText:
-      "データサイエンスとフルスタック開発を基盤とするAIプロダクトエンジニアです。trivagoやZalandoでデータサイエンティスト・プロダクトアナリストとして機械学習モデルやA/Bテスト、データパイプラインの構築に携わった後、Axel Springerでフロントエンド開発に従事し、プロダクトを磨き上げて届けるまでの過程を学びました。現在はこの2つの経験を組み合わせ、フロントエンドはReactとTypeScript、バックエンドはPython・FastAPI・LangChainを用いて、AIを活用したプロダクトをエンドツーエンドで開発しています。国際的なチームでの協働を得意とし、アイデアをユーザー中心の価値あるプロダクトへと形にすることを大切にしています。",
+      "データサイエンスとフルスタック開発を基盤とするAIプロダクトエンジニアです。trivagoやZalandoでデータサイエンティスト・プロダクトアナリストとして機械学習モデルやA/Bテスト、データパイプラインの構築に携わった後、Axel Springerでフロントエンド開発に従事し、プロダクトを磨き上げて届けるまでの過程を学びました。現在はこの2つの経験を組み合わせ、フロントエンドはReactとTypeScript、バックエンドはNode.js・TypeScript・Python・FastAPI・LangChainを用いて、AIを活用したプロダクトをエンドツーエンドで開発しています。国際的なチームでの協働を得意とし、アイデアをユーザー中心の価値あるプロダクトへと形にすることを大切にしています。",
     skills: "技術スキル",
     experience: "経験",
     projects: "プロジェクト",
@@ -159,7 +159,7 @@ export const translations = {
       "KI-gestützte Produkte end-to-end — von Daten- und LLM-Pipelines bis zur ausgereiften Benutzeroberfläche",
     about: "Über mich",
     aboutText:
-      "Ich bin AI Product Engineer mit Wurzeln in Data Science und Full-Stack-Webentwicklung. Begonnen habe ich als Data Scientist und Product Analyst bei trivago und Zalando, wo ich Machine-Learning-Modelle, A/B-Tests und Datenpipelines entwickelte, bevor ich bei Axel Springer in die Frontend-Entwicklung wechselte und lernte, wie ausgereifte Produkte wirklich ausgeliefert werden. Heute verbinde ich beide Welten und entwickle KI-gestützte Anwendungen end-to-end — mit React und TypeScript im Frontend sowie Python, FastAPI und LangChain im Backend, stets mit einem datengetriebenen Ansatz. Durch meine Erfahrung in internationalen Teams verwandle ich Ideen gerne in nutzerzentrierte Produkte mit echtem Mehrwert.",
+      "Ich bin AI Product Engineer mit Wurzeln in Data Science und Full-Stack-Webentwicklung. Begonnen habe ich als Data Scientist und Product Analyst bei trivago und Zalando, wo ich Machine-Learning-Modelle, A/B-Tests und Datenpipelines entwickelte, bevor ich bei Axel Springer in die Frontend-Entwicklung wechselte und lernte, wie ausgereifte Produkte wirklich ausgeliefert werden. Heute verbinde ich beide Welten und entwickle KI-gestützte Anwendungen end-to-end — mit React und TypeScript im Frontend sowie Node.js, TypeScript, Python, FastAPI und LangChain im Backend, stets mit einem datengetriebenen Ansatz. Durch meine Erfahrung in internationalen Teams verwandle ich Ideen gerne in nutzerzentrierte Produkte mit echtem Mehrwert.",
     skills: "Technische Fähigkeiten",
     experience: "Erfahrung",
     projects: "Projekte",
