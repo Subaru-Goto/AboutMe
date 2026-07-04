@@ -17,7 +17,7 @@ function Skills() {
     {
       title: "Backend",
       icon: <Server className="h-5 w-5" />,
-      skills: ["Node.js", "Express.js", "Python", "FastAPI", "LangChain"],
+      skills: ["Node.js", "TypeScript", "Express.js", "Python", "FastAPI", "LangChain"],
     },
     {
       title: "Database",
