@@ -16,7 +16,7 @@ const Contacts = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-white dark:bg-slate-800">
+    <section id="contact" className="scroll-mt-16 py-16 px-4 bg-white dark:bg-slate-800">
       <div className="container mx-auto max-w-4xl text-center">
         <h2 className="text-3xl dark:text-white font-bold mb-6">{t.contact}</h2>
         <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">

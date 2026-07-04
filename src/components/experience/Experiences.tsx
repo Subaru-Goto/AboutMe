@@ -116,7 +116,7 @@ function Experiences() {
   );
 
   return (
-    <section className="py-16 px-4 bg-white dark:bg-slate-800">
+    <section id="experience" className="scroll-mt-16 py-16 px-4 bg-white dark:bg-slate-800">
       <div className="container mx-auto max-w-4xl">
         
         <h2 className="text-3xl dark:text-white font-bold text-center mb-16">

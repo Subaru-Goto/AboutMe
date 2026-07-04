@@ -12,7 +12,7 @@ function Projects() {
   };
 
   return (
-    <section className="py-16 px-4">
+    <section id="projects" className="scroll-mt-16 py-16 px-4">
     <div className="container mx-auto max-w-6xl">
       <h2 className="text-3xl dark:text-white font-bold text-center mb-12">{t.projects}</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
