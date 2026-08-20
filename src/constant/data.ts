@@ -47,10 +47,11 @@ export const translations = {
         link: "https://www.bild.de/ig/0f561b4c-e8b3-4d4b-a8bb-38cf07d5b3ed/index/index.html",
       },
       {
-        title: "Coming Soon",
-        description: "",
-        tech: [],
-        link: "",
+        title: "HR Screening Copilot",
+        description:
+          "An AI-assisted recruiting tool that scores candidates against evidence from their CV while keeping humans in control of every final decision, with a full audit trail designed for EU AI Act compliance.",
+        tech: ["Next.js", "TypeScript", "LangGraph", "LangChain"],
+        link: "https://hr-screening-copilot.vercel.app/",
       },
       {
         title: "Coming Soon",
@@ -122,10 +123,11 @@ export const translations = {
         link: "https://www.bild.de/ig/0f561b4c-e8b3-4d4b-a8bb-38cf07d5b3ed/index/index.html",
       },
       {
-        title: "Coming Soon",
-        description: "",
-        tech: [],
-        link: "",
+        title: "HR Screening Copilot",
+        description:
+          "候補者のCVから得られる根拠に基づいてAIが評価スコアを提示し、最終判断は常に人間が下すリクルーティング支援ツール。EU AI Act準拠を意識した完全な監査ログも備えています。",
+        tech: ["Next.js", "TypeScript", "LangGraph", "LangChain"],
+        link: "https://hr-screening-copilot.vercel.app/",
       },
       {
         title: "Coming Soon",
@@ -198,10 +200,11 @@ export const translations = {
         link: "https://www.bild.de/ig/0f561b4c-e8b3-4d4b-a8bb-38cf07d5b3ed/index/index.html",
       },
       {
-        title: "Coming Soon",
-        description: "",
-        tech: [],
-        link: "",
+        title: "HR Screening Copilot",
+        description:
+          "Ein KI-gestütztes Recruiting-Tool, das Kandidaten anhand von Belegen aus dem Lebenslauf bewertet, während die endgültige Entscheidung stets bei Menschen bleibt — mit vollständigem Audit-Trail für die Einhaltung des EU AI Act.",
+        tech: ["Next.js", "TypeScript", "LangGraph", "LangChain"],
+        link: "https://hr-screening-copilot.vercel.app/",
       },
       {
         title: "Coming Soon",
