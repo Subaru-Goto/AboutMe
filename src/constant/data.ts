@@ -54,10 +54,11 @@ export const translations = {
         link: "https://hr-screening-copilot.vercel.app/",
       },
       {
-        title: "Coming Soon",
-        description: "",
-        tech: [],
-        link: "",
+        title: "PanelVerdict",
+        description:
+          "A synthetic A/B testing platform where a panel of AI personas, sampled to match a country's demographics, compares two content variants and returns a verdict with a Bayesian credible interval and per-persona reasoning. A human approves the panel before voting, and a RAG-powered analyst chatbot answers questions about the results.",
+        tech: ["Next.js", "FastAPI", "LangGraph", "PostgreSQL"],
+        link: "https://panel-verdict.vercel.app/",
       },
     ],
     getInTouch: "Get In Touch",
@@ -130,10 +131,11 @@ export const translations = {
         link: "https://hr-screening-copilot.vercel.app/",
       },
       {
-        title: "Coming Soon",
-        description: "",
-        tech: [],
-        link: "",
+        title: "PanelVerdict",
+        description:
+          "国の人口統計に基づいて生成されたAIペルソナのパネルが2つのコンテンツを比較評価する、合成A/Bテストプラットフォーム。ベイズ統計による信用区間と各ペルソナの理由付きで判定を提示します。投票前にはパネル構成を人間が承認し、RAGを活用した分析チャットボットが結果に関する質問に答えます。",
+        tech: ["Next.js", "FastAPI", "LangGraph", "PostgreSQL"],
+        link: "https://panel-verdict.vercel.app/",
       },
     ],
     getInTouch: "お問い合わせ",
@@ -207,10 +209,11 @@ export const translations = {
         link: "https://hr-screening-copilot.vercel.app/",
       },
       {
-        title: "Coming Soon",
-        description: "",
-        tech: [],
-        link: "",
+        title: "PanelVerdict",
+        description:
+          "Eine Plattform für synthetische A/B-Tests, bei der ein Panel aus KI-Personas, abgestimmt auf die Demografie eines Landes, zwei Inhaltsvarianten vergleicht und ein Urteil mit bayesschem Glaubwürdigkeitsintervall und Begründungen jeder Persona liefert. Vor der Abstimmung wird das Panel von einem Menschen geprüft und freigegeben, und ein RAG-gestützter Analyse-Chatbot beantwortet Fragen zu den Ergebnissen.",
+        tech: ["Next.js", "FastAPI", "LangGraph", "PostgreSQL"],
+        link: "https://panel-verdict.vercel.app/",
       },
     ],
     getInTouch: "Kontakt aufnehmen",
